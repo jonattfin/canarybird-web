@@ -1,0 +1,602 @@
+[
+  {
+    "sensorId": "sensor_dev_61356_675",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.752,
+      23.576
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_58852_880",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77819003435,
+      23.57536625905
+    ]
+  },
+  {
+    "sensorId": "f64129a2-b2cb-4368-a645-b576728b2a9d",
+    "status": "ACTIVE",
+    "position": [
+      46.75312526151298,
+      23.63106498151075
+    ]
+  },
+  {
+    "sensorId": "4ba28dd9-34d6-4653-919f-ab4d172cec48",
+    "status": "ACTIVE",
+    "position": [
+      46.73833025709931,
+      23.49196391852518
+    ]
+  },
+  {
+    "sensorId": "feab4272-e94f-414b-94db-b9c572471060",
+    "status": "ACTIVE",
+    "position": [
+      46.75638156297195,
+      23.575522409587162
+    ]
+  },
+  {
+    "sensorId": "66beabbc-756e-4d15-a477-b1edfcf83af9",
+    "status": "ACTIVE",
+    "position": [
+      46.71038333029715,
+      23.627815246582028
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_57975_653",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77054749266,
+      23.55352878538
+    ]
+  },
+  {
+    "sensorId": "5c1af7f9-9c7f-4215-802e-f8a109876570",
+    "status": "ACTIVE",
+    "position": [
+      46.76838,
+      23.58505
+    ]
+  },
+  {
+    "sensorId": "6dafc888-a97d-446d-8d04-55821cab8492",
+    "status": "ACTIVE",
+    "position": [
+      46.628057559624196,
+      23.561769869587838
+    ]
+  },
+  {
+    "sensorId": "2ddece5e-0d7f-4963-a235-f4837a3cfc0d",
+    "status": "ACTIVE",
+    "position": [
+      46.628522421718024,
+      23.55998708527195
+    ]
+  },
+  {
+    "sensorId": "0e9bd2d5-3db7-4b6e-b221-e860a85e9bd6",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.75037281064007,
+      23.59234667785215
+    ]
+  },
+  {
+    "sensorId": "c48c8361-7d5f-41ac-8b38-e003f16033ff",
+    "status": "ACTIVE",
+    "position": [
+      46.751910652309995,
+      23.52364197572485
+    ]
+  },
+  {
+    "sensorId": "a3e37fe2-45da-4542-9e96-632472483c15",
+    "status": "ACTIVE",
+    "position": [
+      46.762725272140905,
+      23.553373311508096
+    ]
+  },
+  {
+    "sensorId": "de377c2b-dbab-4d7c-a327-43e1849f4967",
+    "status": "ACTIVE",
+    "position": [
+      46.775058,
+      23.626991
+    ]
+  },
+  {
+    "sensorId": "da2f5909-2472-4b72-829b-a0623542ed1f",
+    "status": "ACTIVE",
+    "position": [
+      46.749890816986806,
+      23.578149423340133
+    ]
+  },
+  {
+    "sensorId": "84040ca5-ee74-4951-84d0-78ad282d277f",
+    "status": "ACTIVE",
+    "position": [
+      46.765232122226216,
+      23.735249159973677
+    ]
+  },
+  {
+    "sensorId": "60784373-82e1-4239-8080-d12942317920",
+    "status": "ACTIVE",
+    "position": [
+      46.78607171568119,
+      23.610986501964558
+    ]
+  },
+  {
+    "sensorId": "6d0c813f-179b-4ca1-a6d0-a7da89f4eb2c",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.75661383365983,
+      23.615221813167064
+    ]
+  },
+  {
+    "sensorId": "dc5daf39-5e80-4c7c-a2f4-ff99cbf58784",
+    "status": "ACTIVE",
+    "position": [
+      46.78802432530651,
+      23.616716265678402
+    ]
+  },
+  {
+    "sensorId": "497ce5f8-fcc7-42f8-8607-20a921dba07a",
+    "status": "ACTIVE",
+    "position": [
+      46.77216387326324,
+      23.598437292487066
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_61358_387",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.762,
+      23.598
+    ]
+  },
+  {
+    "sensorId": "d58bdedb-bd8f-461e-ad79-07d19bebb47c",
+    "status": "ACTIVE",
+    "position": [
+      46.781301310228116,
+      23.587106723758204
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_58850_254",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77603941492,
+      23.60309815322
+    ]
+  },
+  {
+    "sensorId": "05560729-d2b3-4b79-873d-d24dfd1e45c8",
+    "status": "ACTIVE",
+    "position": [
+      46.7220268639691,
+      23.569482327129208
+    ]
+  },
+  {
+    "sensorId": "32c2ee23-62ad-4d3e-bb1b-3687f82915be",
+    "status": "ACTIVE",
+    "position": [
+      46.625276840704515,
+      23.66017613276894
+    ]
+  },
+  {
+    "sensorId": "90658647-2bed-447a-a8c5-a0e808d4567f",
+    "status": "ACTIVE",
+    "position": [
+      46.76537,
+      23.60502
+    ]
+  },
+  {
+    "sensorId": "dedaa8e2-8e89-4c4a-b54c-86ae6284e854",
+    "status": "BANNED",
+    "position": [
+      46.753470380074475,
+      23.609704971313477
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_57961_881",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.75392722686,
+      23.62533903119
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_66717_426",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.78788842361,
+      23.6168423295
+    ]
+  },
+  {
+    "sensorId": "c07e3490-7c61-46c5-bb65-86b54cc12508",
+    "status": "ACTIVE",
+    "position": [
+      46.7700926231214,
+      23.54769592935729
+    ]
+  },
+  {
+    "sensorId": "a7f57149-e5e4-4129-8d18-0e2de1da22de",
+    "status": "ACTIVE",
+    "position": [
+      46.79586495061031,
+      23.572305261030362
+    ]
+  },
+  {
+    "sensorId": "4778bc89-0f2d-44e6-9718-4fa12c3d8ed0",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77566,
+      23.59061
+    ]
+  },
+  {
+    "sensorId": "5ca362b3-a3f6-4556-aef6-39489db5fd44",
+    "status": "ACTIVE",
+    "position": [
+      46.75822034319221,
+      23.545644048693152
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_57977_566",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77663604222,
+      23.56265366045
+    ]
+  },
+  {
+    "sensorId": "867abc99-8b01-4b39-a2ec-55510cc4add2",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.76340509544231,
+      23.59857047436271
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_50183_781",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.75534883042,
+      23.58725810071
+    ]
+  },
+  {
+    "sensorId": "281acc50-ea9b-463e-afbb-50063a22f9f5",
+    "status": "ACTIVE",
+    "position": [
+      46.754576,
+      23.627849
+    ]
+  },
+  {
+    "sensorId": "aec1a643-8281-4483-8c9d-9a34fce8547b",
+    "status": "ACTIVE",
+    "position": [
+      46.7578,
+      23.5733
+    ]
+  },
+  {
+    "sensorId": "cd2b5d78-e0e7-4be1-9ae0-ff28f0e73ba7",
+    "status": "ACTIVE",
+    "position": [
+      46.754624556791214,
+      23.597925144032416
+    ]
+  },
+  {
+    "sensorId": "472b26a6-8ab2-4ae8-b517-8ba9948f83f2",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.74465,
+      23.582
+    ]
+  },
+  {
+    "sensorId": "4f9e8c6e-55ce-4260-86f6-0c25b1b08461",
+    "status": "ACTIVE",
+    "position": [
+      46.79775301553542,
+      23.6071711317657
+    ]
+  },
+  {
+    "sensorId": "d6c27d53-8d74-4ff9-a5d8-bede448244c8",
+    "status": "ACTIVE",
+    "position": [
+      46.763918,
+      23.602591
+    ]
+  },
+  {
+    "sensorId": "5213f2c1-4c6f-443c-b378-211f76a2ad7d",
+    "status": "ACTIVE",
+    "position": [
+      46.741460256473125,
+      23.478486228792004
+    ]
+  },
+  {
+    "sensorId": "2918473f-5043-4aa5-967a-d9d80e9e1a05",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.78221,
+      23.561
+    ]
+  },
+  {
+    "sensorId": "522ad249-96b8-47b7-a63e-8dba638cef6e",
+    "status": "ACTIVE",
+    "position": [
+      46.75220738507341,
+      23.60242402770877
+    ]
+  },
+  {
+    "sensorId": "d7875ccd-5d0b-4a96-9c9b-c75fbcb36196",
+    "status": "ACTIVE",
+    "position": [
+      46.76756076883432,
+      23.63665209457263
+    ]
+  },
+  {
+    "sensorId": "c9def55b-ac01-4ad1-8da6-af5d923e2bb0",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.757187399814974,
+      23.575516991491746
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_67380_211",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.74852126537,
+      23.59572529793
+    ]
+  },
+  {
+    "sensorId": "31ee5bf9-5666-4d5f-ba7f-4c9cca246319",
+    "status": "ACTIVE",
+    "position": [
+      46.75605202251909,
+      23.616226974700112
+    ]
+  },
+  {
+    "sensorId": "96b31382-551c-4da5-bbaf-15a1f27012d1",
+    "status": "ACTIVE",
+    "position": [
+      46.763269866588345,
+      23.571811111121132
+    ]
+  },
+  {
+    "sensorId": "51cafeb2-7700-454c-8e88-cfd08a2f2c7b",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.778758471784926,
+      23.598942746446227
+    ]
+  },
+  {
+    "sensorId": "f1f121fe-e142-4c81-85aa-943f4e798aab",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77154,
+      23.58767
+    ]
+  },
+  {
+    "sensorId": "5cf6ecc0-8fd4-4e3a-a28f-1ae4bbe61bd5",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.76366,
+      23.5862
+    ]
+  },
+  {
+    "sensorId": "49dcf36f-a2dc-48d5-a02a-0bd38ccc60b4",
+    "status": "ACTIVE",
+    "position": [
+      46.74376419826819,
+      23.565092188737992
+    ]
+  },
+  {
+    "sensorId": "dbf8655d-d3a5-4a05-bddf-979b5ad3e24d",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.76764,
+      23.58029
+    ]
+  },
+  {
+    "sensorId": "66f067fb-8634-44ef-a12b-86592e153671",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77074,
+      23.58584
+    ]
+  },
+  {
+    "sensorId": "89894faa-572f-4104-b97d-0b9b85cf9261",
+    "status": "ACTIVE",
+    "position": [
+      46.757359,
+      23.556366
+    ]
+  },
+  {
+    "sensorId": "0c6bde5b-bd8b-43a7-86fd-d45b8f9e593d",
+    "status": "ACTIVE",
+    "position": [
+      46.7709127065185,
+      23.62049768926998
+    ]
+  },
+  {
+    "sensorId": "5fe9b4ac-c25c-4dd3-bfb4-3c27258941b0",
+    "status": "ACTIVE",
+    "position": [
+      46.685917524615455,
+      23.546432963274455
+    ]
+  },
+  {
+    "sensorId": "7e8821c2-15f3-4073-949b-2df9112a0d44",
+    "status": "ACTIVE",
+    "position": [
+      46.780113,
+      23.587217
+    ]
+  },
+  {
+    "sensorId": "501a3ae2-6108-46b0-acec-764f17303536",
+    "status": "ACTIVE",
+    "position": [
+      46.755587719805604,
+      23.57768877286149
+    ]
+  },
+  {
+    "sensorId": "87c3e45d-f67e-4a28-8199-20748ba3e0ee",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.774526264886596,
+      23.612254082883506
+    ]
+  },
+  {
+    "sensorId": "ee2663a7-96c1-4116-aa96-997381eb5632",
+    "status": "ACTIVE",
+    "position": [
+      46.74440823526109,
+      23.568866935962703
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_57981_197",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.74790668369,
+      23.5337319376
+    ]
+  },
+  {
+    "sensorId": "c92366b5-ef57-4c93-97d2-c962c9cf8fbe",
+    "status": "ACTIVE",
+    "position": [
+      46.775362446377976,
+      23.635875178649396
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_48110_534",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.76985673606,
+      23.63339424232
+    ]
+  },
+  {
+    "sensorId": "23db8195-a4d5-4212-9fb0-975df5760b0e",
+    "status": "ACTIVE",
+    "position": [
+      46.77876043148148,
+      23.581359020890545
+    ]
+  },
+  {
+    "sensorId": "83939d8e-acff-41fe-a9f9-9743aed04e43",
+    "status": "ACTIVE",
+    "position": [
+      46.79060688367676,
+      23.597225886274042
+    ]
+  },
+  {
+    "sensorId": "0cf57309-7a29-4e54-82fb-9ce6da958dd0",
+    "status": "ACTIVE",
+    "position": [
+      46.78190767489561,
+      23.579471596897616
+    ]
+  },
+  {
+    "sensorId": "3d08ca59-c484-4fc3-82fb-9fa5958ce9c1",
+    "status": "ACTIVE",
+    "position": [
+      46.769421458140194,
+      23.55959635876376
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_47878_128",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.77139108176,
+      23.68712425232
+    ]
+  },
+  {
+    "sensorId": "a18b0fdd-f40b-4ba9-b6a7-251c5c4a89c7",
+    "status": "ACTIVE",
+    "position": [
+      46.7649445251984,
+      23.716305458930208
+    ]
+  },
+  {
+    "sensorId": "439fc4d1-6919-45ff-a552-847bf6c081ef",
+    "status": "ACTIVE",
+    "position": [
+      46.762292386736156,
+      23.61862599849701
+    ]
+  },
+  {
+    "sensorId": "sensor_dev_43544_45",
+    "status": "NOT_CLAIMED",
+    "position": [
+      46.7728901148,
+      23.62206888192
+    ]
+  },
+  {
+    "sensorId": "b350e7d0-49b2-44d5-ae1f-ec32cb0aebc5",
+    "status": "ACTIVE",
+    "position": [
+      46.780727510667205,
+      23.602969781623713
+    ]
+  }
+]
