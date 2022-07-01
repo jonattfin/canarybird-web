@@ -5,54 +5,46 @@ import Link from "next/link";
 
 import * as Images from "./images";
 
-const StyC = getStyledComponents();
-
 export default function Component() {
   return (
     <Grid container spacing={1}>
       <Grid item xl={2}>
-        <StyC.LogoComponent>
+        {/* <LogoComponent>
           <Link href="/">
             <a>
               <Image src={Images.LogoImage} alt="" />
             </a>
           </Link>
-        </StyC.LogoComponent>
+        </LogoComponent> */}
       </Grid>
       <Grid item xl={10}>
-        <StyC.NavComponent>
-          <StyC.DivLink>
+        <NavComponent>
+          <DivLink>
             <a href="#about">About us</a>
-          </StyC.DivLink>
-        </StyC.NavComponent>
+          </DivLink>
+        </NavComponent>
       </Grid>
     </Grid>
   );
 }
 
-function getStyledComponents() {
-  const LogoComponent = styled.nav`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 30px;
-  `;
+// Styled Components
 
-  const NavComponent = styled.nav`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+const LogoComponent = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 30px;
+`;
 
-    padding: 30px;
-  `;
+const NavComponent = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
-  const DivLink = styled.div`
-    padding: 10px;
-  `;
+  padding: 30px;
+`;
 
-  return {
-    LogoComponent,
-    NavComponent,
-    DivLink,
-  };
-}
+const DivLink = styled.div`
+  padding: 10px;
+`;

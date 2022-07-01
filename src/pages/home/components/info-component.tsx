@@ -1,88 +1,88 @@
-import { Grid, Button } from '@mui/material';
-import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
-import styled from '@emotion/styled';
-import Image from 'next/image';
+import { Grid, Button } from "@mui/material";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import styled from "@emotion/styled";
+import Image from "next/image";
 
-import * as Images from './images';
-
-const StyC = getStyledComponents();
+import * as Images from "./images";
 
 export default function Component() {
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} xl={12} id="about">
-        <StyC.DivContainer3>
-          <StyC.DivTitleWithLine>
-            About pulse.eco
-          </StyC.DivTitleWithLine>
-          <StyC.DivSubtitle>
-            Pulse.eco is a crowdsourcing platform, which gathers and presents environmental data.
-            Our network of sensor installations and other third-party sources gathers the data and translates them into visual and easy to understand information.
-            You can learn about the pollution, humidity, temperature or noise in your surroundings with just a few clicks.
-            Even better, you can participate in expanding our network and setup your own devices, to enrich the data sourcing.
-          </StyC.DivSubtitle>
+        <DivContainer3>
+          <DivTitleWithLine>About canarybird.io</DivTitleWithLine>
+          <DivSubtitle>
+            canarybird.io is a crowdsourcing platform, which gathers and
+            presents environmental data. Our network of sensor installations and
+            other third-party sources gathers the data and translates them into
+            visual and easy to understand information. You can learn about the
+            pollution, humidity, temperature or noise in your surroundings with
+            just a few clicks. Even better, you can participate in expanding our
+            network and setup your own devices, to enrich the data sourcing.
+          </DivSubtitle>
           <div>&nbsp;</div>
-          <StyC.DivTitleWithLine>
+          <DivTitleWithLine>
             Participate and help the network grow!
-          </StyC.DivTitleWithLine>
+          </DivTitleWithLine>
           <div>&nbsp;</div>
           <div>&nbsp;</div>
           <div>
-            <Image src={Images.WorldMapImage} alt=""/>
+            <Image src={Images.WorldMapImage} alt="" />
           </div>
-        </StyC.DivContainer3>
+        </DivContainer3>
       </Grid>
       <Grid item xs={12} xl={12}>
-        <StyC.DivContainer4>
+        <DivContainer4>
           <div>
             <div>
-              <StyC.SmallImage src={Images.ConnectImage} alt=""></StyC.SmallImage>
+              <SmallImage src={Images.ConnectImage} alt=""></SmallImage>
             </div>
-            <StyC.SmallTitle>
-              Connect
-            </StyC.SmallTitle>
+            <SmallTitle>Connect</SmallTitle>
             <div>
-              Do you want to see your city on our map? Start a local initiative, tell us the data your city needs and build a community! See how you can create yourcity.pulse.eco
+              Do you want to see your city on our map? Start a local initiative,
+              tell us the data your city needs and build a community!
             </div>
           </div>
           <div>
             <div>
-              <StyC.SmallImage src={Images.HackImage} alt=""></StyC.SmallImage>
+              <SmallImage src={Images.HackImage} alt=""></SmallImage>
             </div>
-            <StyC.SmallTitle>
-              Hack
-            </StyC.SmallTitle>
+            <SmallTitle>Hack</SmallTitle>
             <div>
-              All of the pulse.eco data is available to the public! Feel free to use our REST API for research and development of your own applications.</div>
+              All of the canarybird.io data is available to the public! Feel
+              free to use our REST API for research and development of your own
+              applications.
+            </div>
           </div>
           <div>
             <div>
-              <StyC.SmallImage src={Images.InspireImage} alt=""></StyC.SmallImage>
+              <SmallImage src={Images.InspireImage} alt=""></SmallImage>
             </div>
-            <StyC.SmallTitle>
-              Inspire
-            </StyC.SmallTitle>
+            <SmallTitle>Inspire</SmallTitle>
             <div>
-              Feeling creative? You can become a contributor to our team! Wed love to hear your ideas and recommendations for improvement.</div>
+              Feeling creative? You can become a contributor to our team! Wed
+              love to hear your ideas and recommendations for improvement.
+            </div>
           </div>
-        </StyC.DivContainer4>
+        </DivContainer4>
       </Grid>
       <Grid item xs={12} xl={12}>
-        <StyC.DivParticipate>
-          <Button variant="contained" endIcon={<VolunteerActivismIcon />}>Participate</Button>
-        </StyC.DivParticipate>
+        <DivParticipate>
+          <Button variant="contained" endIcon={<VolunteerActivismIcon />}>
+            Participate
+          </Button>
+        </DivParticipate>
         <div>&nbsp;</div>
         <div>&nbsp;</div>
       </Grid>
-      <Grid item xs={12} xl={12}>
-
-      </Grid>
+      <Grid item xs={12} xl={12}></Grid>
     </Grid>
-  )
+  );
 }
 
-function getStyledComponents() {
-  const DivContainer = styled.div`
+// Styled Components
+
+const DivContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,17 +90,17 @@ function getStyledComponents() {
   height: 80vh;
 `;
 
-  const DivContainer2 = styled(DivContainer)`
+const DivContainer2 = styled(DivContainer)`
   justify-content: space-around;
   height: 60vh;
 `;
 
-  const DivContainer3 = styled(DivContainer)`
+const DivContainer3 = styled(DivContainer)`
   justify-content: flex-start;
   height: 60vh;
 `;
 
-  const DivContainer4 = styled.div`
+const DivContainer4 = styled.div`
   display: flex;
   flex-direction: row;
   height: 120vh;
@@ -110,47 +110,32 @@ function getStyledComponents() {
   text-align: center;
 `;
 
-  const DivTitle = styled.div`
+const DivTitle = styled.div`
   padding: 30px;
   font-size: x-large;
 `;
 
-  const DivTitleWithLine = styled(DivTitle)`
+const DivTitleWithLine = styled(DivTitle)`
   border-bottom: 2px solid goldenrod;
 `;
 
-  const DivSubtitle = styled.div`
+const DivSubtitle = styled.div`
   padding: 40px;
   font-size: larger;
   text-align: center;
 `;
 
-  const DivParticipate = styled.div`
+const DivParticipate = styled.div`
   text-align: center;
 `;
 
-  const SmallImage = styled(Image)`
+const SmallImage = styled(Image)`
   background-color: #111165;
   border-radius: 50%;
   min-width: 50px;
 `;
 
-  const SmallTitle = styled.div`
+const SmallTitle = styled.div`
   font-size: larger;
   padding: 20px;
 `;
-
-  return {
-    DivContainer,
-    SmallTitle,
-    SmallImage,
-    DivParticipate,
-    DivTitle,
-    DivSubtitle,
-    DivTitleWithLine,
-    DivContainer4,
-    DivContainer3,
-    DivContainer2
-  };
-}
-

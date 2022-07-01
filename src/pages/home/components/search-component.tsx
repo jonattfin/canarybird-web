@@ -1,13 +1,11 @@
 import { InputLabel, FormControl, Select, Grid, Button } from "@mui/material";
 import AssistantDirectionIcon from "@mui/icons-material/AssistantDirection";
 import styled from "@emotion/styled";
-import Image from 'next/image';
+import Image from "next/image";
 
 import { useState } from "react";
 
 import * as Images from "./images";
-
-const StyC = getStyledComponents();
 
 interface SearchProps {
   onCityChanged: (city: string) => void;
@@ -21,15 +19,15 @@ export default function Component({ onCityChanged }: SearchProps) {
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} xl={6}>
-        <StyC.DivContainer>
-          <StyC.DivTitle>Co-create the future of your city!</StyC.DivTitle>
-          <StyC.DivSubtitle>
+        <DivContainer>
+          <DivTitle>Co-create the future of your city!</DivTitle>
+          <DivSubtitle>
             Join us in the effort to empower actions towards sustainable
             environmental development. Get informed and participate in
             gathering, analysis and visualization of environmental data to
             contribute for a better tomorrow.
-          </StyC.DivSubtitle>
-          <StyC.FormControlExtended>
+          </DivSubtitle>
+          <FormControlExtended>
             <InputLabel htmlFor="grouped-native-select">Select city</InputLabel>
             <Select
               native
@@ -49,7 +47,7 @@ export default function Component({ onCityChanged }: SearchProps) {
                 </optgroup>
               ))}
             </Select>
-          </StyC.FormControlExtended>
+          </FormControlExtended>
           <div>&nbsp;</div>
           <Button
             variant="contained"
@@ -59,13 +57,13 @@ export default function Component({ onCityChanged }: SearchProps) {
           >
             View map
           </Button>
-        </StyC.DivContainer>
+        </DivContainer>
       </Grid>
       <Grid item xs={12} xl={6}>
-        <StyC.DivContainer2>
+        <DivContainer2>
           <Image src={Images.GraphicHeaderImage} alt="" />
           <div>&nbsp;</div>
-        </StyC.DivContainer2>
+        </DivContainer2>
       </Grid>
     </Grid>
   );
@@ -95,47 +93,38 @@ function getCountries() {
   ];
 }
 
-function getStyledComponents() {
-  const DivContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  `;
+// Styled Components
 
-  const DivContainer2 = styled(DivContainer)`
-    justify-content: space-around;
-    height: 60vh;
-  `;
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+`;
 
-  const DivTitle = styled.div`
-    padding: 30px;
-    font-size: x-large;
-  `;
+const DivContainer2 = styled(DivContainer)`
+  justify-content: space-around;
+  height: 60vh;
+`;
 
-  const DivSubtitle = styled.div`
-    padding: 40px;
-    font-size: larger;
-    text-align: center;
-  `;
+const DivTitle = styled.div`
+  padding: 30px;
+  font-size: x-large;
+`;
 
-  const FormControlExtended = styled(FormControl)`
-    min-width: 50%;
-  `;
+const DivSubtitle = styled.div`
+  padding: 40px;
+  font-size: larger;
+  text-align: center;
+`;
 
-  const DateInput = styled.input`
-    padding: 10px;
-    margin: 5px;
-    /* border-radius: 1px; */
-  `;
+const FormControlExtended = styled(FormControl)`
+  min-width: 50%;
+`;
 
-  return {
-    DivContainer,
-    FormControlExtended,
-    DivTitle,
-    DivSubtitle,
-    DivContainer2,
-    DateInput,
-  };
-}
+const DateInput = styled.input`
+  padding: 10px;
+  margin: 5px;
+  /* border-radius: 1px; */
+`;

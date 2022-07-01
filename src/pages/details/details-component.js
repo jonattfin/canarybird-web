@@ -13,8 +13,6 @@ import * as Components from "./components";
 import * as Images from "./images";
 import { Measurements } from "./measurements";
 
-const StyC = getStyledComponents();
-
 export default function Component({
   value,
   handleChange,
@@ -25,11 +23,11 @@ export default function Component({
 }) {
   return (
     <div>
-      <StyC.HeaderContainer>
+      <HeaderContainer>
         <Image src={Images.LogoImage} alt="" />
 
-        <StyC.MenuContainer>
-          <StyC.CityTitle>
+        <MenuContainer>
+          <CityTitle>
             <Breadcrumbs aria-label="breadcrumb">
               <Link href="/">
                 <a>Home</a>
@@ -38,7 +36,7 @@ export default function Component({
                 <a>{city}</a>
               </Link>
             </Breadcrumbs>
-          </StyC.CityTitle>
+          </CityTitle>
           <Link href="/">
             <a>Explore data</a>
           </Link>
@@ -55,11 +53,11 @@ export default function Component({
           <Link href="/">
             <a>Register</a>
           </Link>
-        </StyC.MenuContainer>
-      </StyC.HeaderContainer>
+        </MenuContainer>
+      </HeaderContainer>
 
-      <StyC.FlexContainer>
-        <StyC.CustomTabs
+      <FlexContainer>
+        <CustomTabs
           orientation="vertical"
           variant="scrollable"
           value={value}
@@ -75,15 +73,15 @@ export default function Component({
               label={label}
             />
           ))}
-        </StyC.CustomTabs>
-        <StyC.Flex1Container>
+        </CustomTabs>
+        <Flex1Container>
           {inProgress && <CircularProgress />}
           {!inProgress && (
             <TabPanel title={Measurements[value].title} data={data} />
           )}
-        </StyC.Flex1Container>
+        </Flex1Container>
         {RenderDynamicMap(sensors)}
-      </StyC.FlexContainer>
+      </FlexContainer>
     </div>
   );
 }
@@ -107,65 +105,56 @@ function RenderDynamicMap(sensors) {
   return <Map sensors={sensors} />;
 }
 
-function getStyledComponents() {
-  const FlexContainer = styled.div`
-    display: flex;
+// Styled Components
 
-    display: flex;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: center;
-  `;
+const FlexContainer = styled.div`
+  display: flex;
 
-  const Flex1Container = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-    display: flex;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
+const Flex1Container = styled.div`
+  display: flex;
+  flex-direction: column;
 
-    background-color: white;
-    min-width: 20vw;
-  `;
+  display: flex;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
 
-  const HeaderContainer = styled.div`
-    display: flex;
-    height: 6vh;
-    justify-content: flex-start;
-    align-items: center;
-  `;
+  background-color: white;
+  min-width: 20vw;
+`;
 
-  const CityTitle = styled.p`
-    text-transform: capitalize;
-    padding: 0px 20px;
-  `;
+const HeaderContainer = styled.div`
+  display: flex;
+  height: 6vh;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-  const MenuContainer = styled.div`
-    display: flex;
-    height: 6vh;
-    justify-content: flex-end;
-    align-items: center;
+const CityTitle = styled.p`
+  text-transform: capitalize;
+  padding: 0px 20px;
+`;
 
-    padding-left: 20px;
+const MenuContainer = styled.div`
+  display: flex;
+  height: 6vh;
+  justify-content: flex-end;
+  align-items: center;
 
-    a {
-      padding: 10px;
-    }
-  `;
+  padding-left: 20px;
 
-  const CustomTabs = styled(Tabs)`
-    background-color: white;
-    height: 40vh;
-  `;
+  a {
+    padding: 10px;
+  }
+`;
 
-  return {
-    FlexContainer,
-    Flex1Container,
-    HeaderContainer,
-    CityTitle,
-    MenuContainer,
-    CustomTabs,
-  };
-}
+const CustomTabs = styled(Tabs)`
+  background-color: white;
+  height: 40vh;
+`;
