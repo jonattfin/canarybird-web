@@ -5,23 +5,25 @@ import {
   CircleMarker,
   Tooltip,
 } from "react-leaflet";
-import { latLngCenter } from "latitude-longitude";
+import _ from "lodash";
 
 import "leaflet/dist/leaflet.css";
 import { NoSsr } from "@mui/material";
+import { IDevice } from "../../../api/interfaces";
 
 const { BaseLayer } = LayersControl;
 
-export default function Component({ sensors }) {
-  if (sensors.length === 0) return;
+export default function Component({ devices }: { devices: IDevice[] }) {
+  if (devices.length === 0) 
+    return <div>&nbsp;</div>;
 
-  const center = latLngCenter(sensors.map((s) => mapPosition(s.position)));
+  const [lat, lng, zoom] = mapPosition(devices[0].position);
 
   return (
     <NoSsr>
       <MapContainer
-        center={[center.lat, center.lng]}
-        zoom={center.zoom}
+        center={[lat, lng]}
+        zoom={zoom}
         scrollWheelZoom={true}
         style={{ height: "100vh", width: "80vw" }}
       >
@@ -29,7 +31,7 @@ export default function Component({ sensors }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {renderSensors(sensors)}
+        {renderDevices(devices)}
         <LayersControl position="topright">
           <BaseLayer name="OpenStreetMap.Mapnik">
             <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
@@ -40,23 +42,23 @@ export default function Component({ sensors }) {
   );
 }
 
-function renderSensors(sensors) {
-  return sensors.map((sensor, i) => (
-    <CircleMarker
-      key={`sensor${i}`}
-      center={mapPosition(sensor.position)}
-      radius={10}
-    >
-      <Tooltip>
-        <p>
-          {sensor.sensorId} [{sensor.status}]
-        </p>
-      </Tooltip>
-    </CircleMarker>
-  ));
+function renderDevices(devices: IDevice[]) {
+  return devices.map((device, i) => {
+    const [lat, long] = mapPosition(device.position);
+
+    return (
+      <CircleMarker key={`sensor${i}`} center={[lat, long]} radius={10}>
+        <Tooltip>
+          <p>
+            {device.sensorId} [{device.status}]
+          </p>
+        </Tooltip>
+      </CircleMarker>
+    );
+  });
 }
 
-function mapPosition(position) {
+function mapPosition(position: string) {
   const positionArray = position.split(",");
   return [parseFloat(positionArray[0]), parseFloat(positionArray[1])];
 }

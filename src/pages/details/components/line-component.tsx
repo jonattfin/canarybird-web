@@ -1,21 +1,26 @@
 import React from "react";
 import { Line } from "@nivo/line";
 import { NoSsr } from "@mui/material";
+import { IMeasurement } from "../../../api/interfaces";
 
 const commonProperties = {
   height: 320,
   width: 600,
   margin: { left: 50, bottom: 50 },
   animate: true,
-  enableSlices: "x",
 };
 
-export default function Component({ measurements }) {
+export default function Component({
+  measurements,
+}: {
+  measurements: IMeasurement[];
+}) {
   return (
     <NoSsr>
       <Line
         {...commonProperties}
-        data={remapData(measurements)}
+        data={measurements}
+        enableSlices="x"
         xScale={{
           type: "time",
           format: "%Y-%m-%d",
@@ -54,20 +59,4 @@ export default function Component({ measurements }) {
       />
     </NoSsr>
   );
-}
-
-function remapData(measurements) {
-  return measurements.map((measurement) => {
-    const mappedData = measurement.data.map((data) => {
-      return {
-        x: new Date(data.x),
-        y: data.y,
-      };
-    });
-
-    return {
-      data: mappedData,
-      id: measurement.id,
-    };
-  });
 }

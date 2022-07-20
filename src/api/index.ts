@@ -1,24 +1,33 @@
+import { resourceLimits } from "worker_threads";
+import { IDevice, ILocation, IMeasurement } from "./interfaces";
+
 class Api {
   private environment!: IEnvironment;
   constructor(environment: IEnvironment) {
     this.environment = environment;
   }
 
-  async fetchLocations() {
+  async fetchLocations(): Promise<ILocation[]> {
     const res = await fetch(`${this.environment.baseUrl}/cities`);
-    return res.json();
+    const results = (await res.json()) as ILocation[];
+    return results;
   }
 
-  async fetchDevices(city: string) {
+  async fetchDevices(city: string): Promise<IDevice[]> {
     const res = await fetch(`${this.environment.baseUrl}/devices/${city}`);
-    return res.json();
+    const results = (await res.json()) as IDevice[];
+    return results;
   }
 
-  async fetchMeasurements(city: string, measurementType: string) {
-    const url = `${this.environment.baseUrl}/measurements?city=${city}&measurementType=${measurementType}`;
-    console.log(url);
-    const res = await fetch(url);
-    return res.json();
+  async fetchMeasurements(
+    city: string,
+    measurementType: string
+  ): Promise<IMeasurement[]> {
+    const res = await fetch(
+      `${this.environment.baseUrl}/measurements?city=${city}&measurementType=${measurementType}`
+    );
+    const results = (await res.json()) as IMeasurement[];
+    return remapData(results);
   }
 }
 
@@ -42,5 +51,22 @@ class ProdEnvironment implements IEnvironment {
   }
 }
 
-const api = new Api(new ProdEnvironment());
+const api = new Api(new DevEnvironment());
 export default api;
+
+
+function remapData(measurements: IMeasurement[]) {
+  return measurements.map((measurement) => {
+    const mappedData = measurement.data.map((data) => {
+      return {
+        x: new Date(data.x),
+        y: data.y,
+      };
+    });
+
+    return {
+      data: mappedData,
+      id: measurement.id,
+    };
+  });
+}

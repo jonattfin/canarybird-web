@@ -12,6 +12,16 @@ import dynamic from "next/dynamic";
 import * as Components from "./components";
 import * as Images from "./images";
 import { Measurements } from "./measurements";
+import { IDevice, IMeasurement } from "../../api/interfaces";
+
+export interface IDetailsProps {
+  inProgress: boolean;
+  measurements: IMeasurement[];
+  devices: IDevice[];
+  city: string | string[] | undefined;
+  value: number;
+  handleChange: (value: number) => void;
+}
 
 export default function Component({
   value,
@@ -20,7 +30,7 @@ export default function Component({
   measurements,
   city,
   devices,
-}) {
+}: IDetailsProps) {
   return (
     <div>
       <HeaderContainer>
@@ -61,7 +71,7 @@ export default function Component({
           orientation="vertical"
           variant="scrollable"
           value={value}
-          onChange={handleChange}
+          onChange={(_, newValue) => handleChange(newValue)}
           aria-label="Vertical tabs example"
           sx={{ borderRight: 1, borderColor: "divider" }}
         >
@@ -80,13 +90,20 @@ export default function Component({
             <TabPanel {...{ title: Measurements[value].title, measurements }} />
           )}
         </Flex1Container>
-        {RenderDynamicMap(devices)}
+        {/* {RenderDynamicMap({ devices })} */}
+        <Components.MapComponent {...{ devices }} />
       </FlexContainer>
     </div>
   );
 }
 
-function TabPanel({ measurements, title }) {
+function TabPanel({
+  measurements,
+  title,
+}: {
+  measurements: IMeasurement[];
+  title: string;
+}) {
   return (
     <Fragment>
       <div>{title}</div>
@@ -97,12 +114,12 @@ function TabPanel({ measurements, title }) {
   );
 }
 
-function RenderDynamicMap(sensors) {
-  const Map = dynamic(
-    () => import("./components/map-component"), // replace '@components/map' with your component's location
-    { ssr: false } // This line is important. It's what prevents server-side render
-  );
-  return <Map sensors={sensors} />;
+function RenderDynamicMap({ devices }: { devices: IDevice[] }) {
+  // const Map = dynamic(
+  //   () => import("./components/map-component"), // replace '@components/map' with your component's location
+  //   { ssr: false } // This line is important. It's what prevents server-side render
+  // );
+  // return <Components.MapComponent {...{ devices }} />;
 }
 
 // Styled Components

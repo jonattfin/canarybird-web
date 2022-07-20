@@ -15,9 +15,11 @@ interface SearchProps {
 }
 
 export default function Component({ onCityChanged }: SearchProps) {
-  const { data, isLoading, error } = useQuery(["locations"], () =>
-    api.fetchLocations()
-  );
+  const {
+    data = [],
+    isLoading,
+    error,
+  } = useQuery(["locations"], () => api.fetchLocations());
 
   const [city, onCityChanging] = useState("");
 
@@ -47,7 +49,7 @@ export default function Component({ onCityChanged }: SearchProps) {
               onChange={handleOnChange}
             >
               <option aria-label="None" value="Select a city" />
-              {(data as ILocation[]).map(({ country, cities }, i) => (
+              {data.map(({ country, cities }, i) => (
                 <optgroup key={country} label={country}>
                   {cities.map((city, j) => (
                     <option key={city} value={city}>
