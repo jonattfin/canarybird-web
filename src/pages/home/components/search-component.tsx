@@ -15,7 +15,7 @@ interface SearchProps {
 }
 
 export default function Component({ onCityChanged }: SearchProps) {
-  const { data, isLoading, error } = useQuery(["cities"], () =>
+  const { data, isLoading, error } = useQuery(["locations"], () =>
     api.fetchLocations()
   );
 

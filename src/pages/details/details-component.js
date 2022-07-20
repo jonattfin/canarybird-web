@@ -91,7 +91,7 @@ function TabPanel({ measurements, title }) {
     <Fragment>
       <div>{title}</div>
       <div>&nbsp;</div>
-      <Components.LineComponent data={measurements} />
+      <Components.LineComponent {...{ measurements }} />
       <div>&nbsp;</div>
     </Fragment>
   );

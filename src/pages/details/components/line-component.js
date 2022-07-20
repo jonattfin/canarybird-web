@@ -10,12 +10,12 @@ const commonProperties = {
   enableSlices: "x",
 };
 
-export default function Component({ data }) {
+export default function Component({ measurements }) {
   return (
     <NoSsr>
       <Line
         {...commonProperties}
-        data={data}
+        data={remapData(measurements)}
         xScale={{
           type: "time",
           format: "%Y-%m-%d",
@@ -54,4 +54,20 @@ export default function Component({ data }) {
       />
     </NoSsr>
   );
+}
+
+function remapData(measurements) {
+  return measurements.map((measurement) => {
+    const mappedData = measurement.data.map((data) => {
+      return {
+        x: new Date(data.x),
+        y: data.y,
+      };
+    });
+
+    return {
+      data: mappedData,
+      id: measurement.id,
+    };
+  });
 }
