@@ -17,9 +17,9 @@ export default function Component({
   value,
   handleChange,
   inProgress,
-  data,
+  measurements,
   city,
-  sensors,
+  devices,
 }) {
   return (
     <div>
@@ -77,21 +77,21 @@ export default function Component({
         <Flex1Container>
           {inProgress && <CircularProgress />}
           {!inProgress && (
-            <TabPanel title={Measurements[value].title} data={data} />
+            <TabPanel {...{ title: Measurements[value].title, measurements }} />
           )}
         </Flex1Container>
-        {RenderDynamicMap(sensors)}
+        {RenderDynamicMap(devices)}
       </FlexContainer>
     </div>
   );
 }
 
-function TabPanel({ data, title }) {
+function TabPanel({ measurements, title }) {
   return (
     <Fragment>
       <div>{title}</div>
       <div>&nbsp;</div>
-      <Components.LineComponent {...data} />
+      <Components.LineComponent data={measurements} />
       <div>&nbsp;</div>
     </Fragment>
   );

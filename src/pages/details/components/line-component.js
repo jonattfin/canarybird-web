@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "@nivo/line";
+import { NoSsr } from "@mui/material";
 
 const commonProperties = {
   height: 320,
@@ -9,15 +10,12 @@ const commonProperties = {
   enableSlices: "x",
 };
 
-export default function Component(props) {
-  const { payload = {} } = props;
-  const { points = [] } = payload;
-
+export default function Component({ data }) {
   return (
-    <div>
+    <NoSsr>
       <Line
         {...commonProperties}
-        data={points}
+        data={data}
         xScale={{
           type: "time",
           format: "%Y-%m-%d",
@@ -54,6 +52,6 @@ export default function Component(props) {
           },
         ]}
       />
-    </div>
+    </NoSsr>
   );
 }

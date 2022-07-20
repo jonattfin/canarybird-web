@@ -3,14 +3,14 @@ import { useRouter } from "next/router";
 
 import DetailsComponent from "./details-component";
 import { Measurements } from './measurements';
-import * as api from "../../api";
+import api from "../../api";
 
 export default function Component() {
-  const [data, setData] = useState([]);
-  const [inProgressData, setInProgressData] = useState(false);
+  const [measurements, setMeasurements] = useState([]);
+  const [inProgressMeasurements, setInProgressMeasurements] = useState(false);
 
-  const [sensors, setSensors] = useState([]);
-  const [inProgressSensors, setInProgressSensors] = useState(false);
+  const [devices, setDevices] = useState([]);
+  const [inProgressDevices, setInProgressDevices] = useState(false);
 
   const [value, setValue] = useState(0);
 
@@ -21,38 +21,42 @@ export default function Component() {
 
   useEffect(() => {
     const fetchData = async () => {
-      setInProgressSensors(true);
-      const data = await api.fetchSensors(city);
-      setSensors(data);
-      setInProgressSensors(false);
+      setInProgressDevices(true);
+      const devices = await api.fetchDevices(city);
+      setDevices(devices);
+      setInProgressDevices(false);
     };
 
     fetchData();
   }, [value, city]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setInProgressData(true);
-  //     const data = await api.fetchDataFromServer(
-  //       Measurements[value].type,
-  //       city
-  //     );
-  //     setData(data);
-  //     setInProgressData(false);
-  //   };
+  useEffect(() => {
+    if (!city) {
+      return;
+    }
 
-  //   fetchData();
-  // }, [value, city]);
+    const fetchData = async () => {
+      setInProgressMeasurements(true);
+      const measurements = await api.fetchMeasurements(
+        city,
+        Measurements[value].type,
+      );
+      setMeasurements(measurements);
+      setInProgressMeasurements(false);
+    };
+
+    fetchData();
+  }, [value, city]);
 
   return (
     <DetailsComponent
       {...{
-        data,
-        inProgress: inProgressData || inProgressSensors,
+        measurements,
+        inProgress: inProgressMeasurements || inProgressDevices,
         handleChange,
         value,
         city,
-        sensors,
+        devices,
       }}
     />
   );

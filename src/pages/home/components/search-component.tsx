@@ -2,17 +2,27 @@ import { InputLabel, FormControl, Select, Grid, Button } from "@mui/material";
 import AssistantDirectionIcon from "@mui/icons-material/AssistantDirection";
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { useQuery } from "@tanstack/react-query";
 
 import { useState } from "react";
 
 import * as Images from "./images";
+import api from "../../../api";
+import { ILocation } from "../../../api/interfaces";
 
 interface SearchProps {
   onCityChanged: (city: string) => void;
 }
 
 export default function Component({ onCityChanged }: SearchProps) {
+  const { data, isLoading, error } = useQuery(["cities"], () =>
+    api.fetchLocations()
+  );
+
   const [city, onCityChanging] = useState("");
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error || !data) <p>An error has occurred.</p>;
 
   const handleOnChange = (ev: any) => onCityChanging(ev.target.value);
 
@@ -37,11 +47,11 @@ export default function Component({ onCityChanged }: SearchProps) {
               onChange={handleOnChange}
             >
               <option aria-label="None" value="Select a city" />
-              {getCountries().map((country, i) => (
-                <optgroup key={country.name} label={country.name}>
-                  {country.cities.map((city, j) => (
-                    <option key={city.name} value={city.name}>
-                      {city.name}
+              {(data as ILocation[]).map(({ country, cities }, i) => (
+                <optgroup key={country} label={country}>
+                  {cities.map((city, j) => (
+                    <option key={city} value={city}>
+                      {city}
                     </option>
                   ))}
                 </optgroup>
@@ -67,30 +77,6 @@ export default function Component({ onCityChanged }: SearchProps) {
       </Grid>
     </Grid>
   );
-}
-
-function getCountries() {
-  return [
-    {
-      name: "Germany",
-      cities: [{ name: "Berlin" }],
-    },
-    {
-      name: "Macedonia",
-      cities: [{ name: "Bitola" }, { name: "Skopje" }, { name: "Tetovo" }],
-    },
-    {
-      name: "Romania",
-      cities: [
-        { name: "Bucharest" },
-        { name: "Brasov" },
-        { name: "Cluj-Napoca" },
-        { name: "Iasi" },
-        { name: "Oradea" },
-        { name: "TarguMures" },
-      ],
-    },
-  ];
 }
 
 // Styled Components
