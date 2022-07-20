@@ -14,16 +14,15 @@ import { IDevice } from "../../../api/interfaces";
 const { BaseLayer } = LayersControl;
 
 export default function Component({ devices }: { devices: IDevice[] }) {
-  if (devices.length === 0) 
-    return <div>&nbsp;</div>;
+  if (devices.length === 0) return <div>&nbsp;</div>;
 
-  const [lat, lng, zoom] = mapPosition(devices[0].position);
+  const [lat, lng] = mapPosition(devices[0].position);
 
   return (
     <NoSsr>
       <MapContainer
         center={[lat, lng]}
-        zoom={zoom}
+        zoom={10}
         scrollWheelZoom={true}
         style={{ height: "100vh", width: "80vw" }}
       >
