@@ -90,8 +90,7 @@ export default function Component({
             <TabPanel {...{ title: Measurements[value].title, measurements }} />
           )}
         </Flex1Container>
-        {/* {RenderDynamicMap({ devices })} */}
-        <Components.MapComponent {...{ devices }} />
+        {RenderDynamicMap({ devices })}
       </FlexContainer>
     </div>
   );
@@ -115,11 +114,11 @@ function TabPanel({
 }
 
 function RenderDynamicMap({ devices }: { devices: IDevice[] }) {
-  // const Map = dynamic(
-  //   () => import("./components/map-component"), // replace '@components/map' with your component's location
-  //   { ssr: false } // This line is important. It's what prevents server-side render
-  // );
-  // return <Components.MapComponent {...{ devices }} />;
+  const MapComponent = dynamic(
+    () => import("./components/map-component"), // replace '@components/map' with your component's location
+    { ssr: false } // This line is important. It's what prevents server-side render
+  );
+  return <MapComponent {...{ devices }} />;
 }
 
 // Styled Components
