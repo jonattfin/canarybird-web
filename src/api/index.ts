@@ -51,7 +51,7 @@ class ProdEnvironment implements IEnvironment {
   }
 }
 
-const api = new Api(new DevEnvironment());
+const api = new Api(new ProdEnvironment());
 export default api;
 
 
