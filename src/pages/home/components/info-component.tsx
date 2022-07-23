@@ -10,9 +10,9 @@ export default function Component() {
     <Grid container spacing={1}>
       <Grid item xs={12} xl={12} id="about">
         <DivContainer3>
-          <DivTitleWithLine>About canarybird.io</DivTitleWithLine>
+          <DivTitleWithLine>About pulse.eco</DivTitleWithLine>
           <DivSubtitle>
-            canarybird.io is a crowdsourcing platform, which gathers and
+            pulse.eco is a crowdsourcing platform, which gathers and
             presents environmental data. Our network of sensor installations and
             other third-party sources gathers the data and translates them into
             visual and easy to understand information. You can learn about the
@@ -49,7 +49,7 @@ export default function Component() {
             </div>
             <SmallTitle>Hack</SmallTitle>
             <div>
-              All of the canarybird.io data is available to the public! Feel
+              All of the pulse.eco data is available to the public! Feel
               free to use our REST API for research and development of your own
               applications.
             </div>

@@ -32,7 +32,7 @@ export default function Component({ onCityChanged }: HomeProps) {
       <Grid item xs={12} xl={6}>
         <DivFooter>
           <div>Feel the pulse of your city!</div>
-          <div>© 2022 canarybird.io. All rights reserved.</div>
+          <div>© 2022 pulse.eco. All rights reserved.</div>
         </DivFooter>
       </Grid>
       <Grid item xl={3} />

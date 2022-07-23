@@ -1,4 +1,3 @@
-import { resourceLimits } from "worker_threads";
 import { IDevice, ILocation, IMeasurement } from "./interfaces";
 
 class Api {
@@ -47,7 +46,7 @@ class ProdEnvironment implements IEnvironment {
   baseUrl: string;
 
   constructor() {
-    this.baseUrl = "https://canarybird.herokuapp.com";
+    this.baseUrl = "https://pulse-clone.herokuapp.com";
   }
 }
 
